@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miller Indices Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Miller Indices Calculator</h1>
+            <p class="description">Calculate Miller indices and view crystallographic planes</p>
+        </header>
+
+        <main class="content-wrapper">
+            <!-- Input Section -->
+            <section class="input-panel">
+                <div class="input-group">
+                    <label for="x-intercept">X-Intercept:</label>
+                    <input type="number" id="x-intercept" step="any">
+                    <span class="error-message" id="x-error"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="y-intercept">Y-Intercept:</label>
+                    <input type="number" id="y-intercept" step="any">
+                    <span class="error-message" id="y-error"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="z-intercept">Z-Intercept:</label>
+                    <input type="number" id="z-intercept" step="any">
+                    <span class="error-message" id="z-error"></span>
+                </div>
+
+                <button id="calculate-btn">Calculate</button>
+
+                <div class="results" id="results-panel">
+                    <h3>Results:</h3>
+                    <p id="miller-indices"></p>
+                    <p id="additional-info"></p>
+                </div>
+            </section>
+
+            <!-- Visualization Section -->
+            <section class="visualization-panel">
+                <canvas id="diagram" width="500" height="500"></canvas>
+                <div class="diagram-controls">
+                    <button id="reset-view">Reset View</button>
+                    <button id="toggle-grid">Toggle Grid</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="instructions">
+                <h4>How to use:</h4>
+                <ol>
+                    <li>Enter the x, y, and z intercepts</li>
+                    <li>Click Calculate to see the Miller indices</li>
+                    <li>View the plane in the diagram</li>
+                </ol>
+            </div>
+            <div class="legend">
+                <h4>Legend:</h4>
+                <ul>
+                    <li>X-axis: Red</li>
+                    <li>Y-axis: Green</li>
+                    <li>Z-axis: Blue</li>
+                    <li>Plane: Purple</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/validation.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/diagram.js"></script>
+</body>
+</html>
